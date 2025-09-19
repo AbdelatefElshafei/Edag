@@ -1,4 +1,5 @@
 # Express Dynamic API Generator
+![Logo](https://github.com/user-attachments/assets/633a0c23-9458-488a-b583-f16e358c3f6d)
 
 [![npm version](https://badge.fury.io/js/edag.svg)](https://www.npmjs.com/package/edag)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
