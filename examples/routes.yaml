@@ -1,0 +1,56 @@
+# A list of API route definitions. Each route starts with a hyphen (-).
+
+- path: /users
+  method: get
+  handler: user-handlers.getAllUsers
+  middleware:
+    - logger
+  successMessage: "Users retrieved successfully"
+  summary: "Get all users"
+
+- path: /users/:id
+  method: get
+  handler: user-handlers.getUserById
+  middleware:
+    - logger
+  validate:
+    params:
+      id:
+        type: number
+        required: true
+        integer: true
+  successMessage: "User found"
+  summary: "Get a single user by ID"
+
+- path: /users
+  method: post
+  handler: user-handlers.createUser
+  middleware:
+    - logger
+  validate:
+    body:
+      name:
+        type: string
+        required: true
+        min: 2
+      email:
+        type: string
+        email: true
+        required: true
+  successMessage: "User created successfully"
+  summary: "Create a new user"
+
+# This is a new, correctly formatted route.
+# You will need to create a `product-handlers.js` file for this to work.
+# For now, you can comment it out or create the handler file.
+#
+#- path: /products/:id
+#  method: get
+#  handler: product-handlers.getProductById
+#  successMessage: "Product retrieved successfully"
+#  validate:
+#    params:
+#      id:
+#        type: number
+#        integer: true
+#        required: true
