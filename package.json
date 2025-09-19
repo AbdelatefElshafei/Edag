@@ -1,0 +1,49 @@
+{
+  "name": "edag",
+  "version": "1.0.2",
+  "description": "A library to automatically generate Express.js routes, validation, and documentation from a config file.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+"keywords": [
+    "express",
+    "expressjs",
+    "api",
+    "rest",
+    "restful",
+    "generator",
+    "dynamic",
+    "router",
+    "routing",
+    "validation",
+    "joi",
+    "swagger",
+    "openapi",
+    "documentation",
+    "auto-documentation",
+    "boilerplate",
+    "scaffolding",
+    "yaml",
+    "json",
+    "node",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "express": "^5.1.0"
+},
+  "dependencies": {
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "morgan": "^1.10.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.8.1"
+  }
+}
