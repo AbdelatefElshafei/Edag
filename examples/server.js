@@ -9,19 +9,18 @@ const app = express();
 const PORT = process.env.PORT || 3005;
 
 // 1. Apply global middleware
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json()); 
 
 // 2. Register named middleware that can be used in the YAML config
-// Here, we're using the popular 'morgan' logger
 registerMiddleware('logger', morgan('dev'));
 
 // 3. Generate the API routes from your configuration
 generateApi(app, {
-  configPath: path.join(__dirname, 'routes.yaml'), // Use path.join for reliability
-  handlerPath: path.join(__dirname, 'handlers'),   // Use path.join for reliability
+  configPath: path.join(__dirname, 'routes.yaml'), 
+  handlerPath: path.join(__dirname, 'handlers'),   
 });
 
-// 4. Add the centralized error handler. This MUST be last.
+// 4. Add the centralized error handler.
 app.use(errorHandler);
 
 // 5. Start the server

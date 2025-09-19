@@ -1,6 +1,6 @@
 {
   "name": "edag",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library to automatically generate Express.js routes, validation, and documentation from a config file.",
   "main": "index.js",
   "directories": {
